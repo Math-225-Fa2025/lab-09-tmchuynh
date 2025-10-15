@@ -89,6 +89,15 @@ covid_data
 
 2.  Make a visualization that more accurately (and honestly) tells the story.
 
+```{r improved-viz, fig.width=10, fig.height=6, eval=TRUE}
+# Create an improved bar chart with proper scaling and clear labels
+ggplot(covid_data, aes(x = mask_policy, y = cases_per_100k, fill = mask_policy)) +
+  geom_col(width = 0.6) +
+  scale_y_continuous(limits = c(0, 30), breaks = seq(0, 30, 5)) +
+  scale_fill_manual(values = c("With masks" = "steelblue", "Without masks" = "coral")) +
+  geom_text(aes(label = cases_per_100k), vjust = -0.5, size = 4)
+```
+
 3.  What message is more clear in your visualization than it was in the original visualization?
 
 4.  What, if any, useful information do these data and your visualization tell us about mask wearing and COVID?
