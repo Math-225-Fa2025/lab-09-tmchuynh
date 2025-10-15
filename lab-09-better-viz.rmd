@@ -76,6 +76,17 @@ you can write
 ```{r ref.label="tribble", eval = FALSE}
 ```
 
+```{r create-data, eval=TRUE}
+# Create data frame to reconstruct the misleading visualization
+covid_data <- tribble(
+  ~county_type, ~mask_policy, ~cases_per_100k,
+  "Kansas counties with mask mandates", "With masks", 16,
+  "Kansas counties without mask mandates", "Without masks", 25
+)
+
+covid_data
+```
+
 2.  Make a visualization that more accurately (and honestly) tells the story.
 
 3.  What message is more clear in your visualization than it was in the original visualization?
