@@ -95,6 +95,21 @@ ggplot(covid_data, aes(x = mask_policy, y = cases_per_100k, fill = mask_policy))
   geom_col(width = 0.6) +
   scale_y_continuous(limits = c(0, 30), breaks = seq(0, 30, 5)) +
   scale_fill_manual(values = c("With masks" = "steelblue", "Without masks" = "coral")) +
+  labs(
+    title = "COVID-19 Cases per 100,000 in Kansas Counties",
+    subtitle = "Comparison between counties with and without mask mandates",
+    x = "Mask Policy",
+    y = "Cases per 100,000 people",
+    caption = "Data represents estimated values for illustration purposes"
+  ) +
+  theme_minimal() +
+  theme(
+    legend.position = "none",
+    plot.title = element_text(size = 14, face = "bold"),
+    plot.subtitle = element_text(size = 12),
+    axis.title = element_text(size = 11),
+    axis.text = element_text(size = 10)
+  ) +
   geom_text(aes(label = cases_per_100k), vjust = -0.5, size = 4)
 ```
 
