@@ -1,15 +1,13 @@
 ---
 title: "Lab 09 - Conveying the right message through visualisation"
 output: 
-  tufte::tufte_html:
-    css: ../lab.css
-    tufte_variant: "envisioned"
-    highlight: pygments
-  tufte::tufte_handout:
+  pdf_document:
     latex_engine: xelatex
-    highlight: pygments
-    keep_tex: true
+    toc: true
+    number_sections: true
+    fig_caption: true
     citation_package: natbib
+    keep_tex: true
 link-citations: true
 ---
 
