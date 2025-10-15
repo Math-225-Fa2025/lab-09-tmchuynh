@@ -115,6 +115,13 @@ ggplot(covid_data, aes(x = mask_policy, y = cases_per_100k, fill = mask_policy))
 
 3.  What message is more clear in your visualization than it was in the original visualization?
 
+My improved visualization makes several key improvements over the original misleading chart:
+
+    - **Proper y-axis scaling**: The y-axis starts at 0, which accurately represents the proportional difference between the two groups. The original chart likely had a truncated y-axis that exaggerated the visual difference.
+    - **Clear proportional representation**: The true difference between counties with masks (15 cases per 100k) and without masks (25 cases per 100k) is now visually proportional - about a 40% difference rather than appearing dramatically larger.
+    - **Honest visual comparison**: The bars now show the actual relative magnitude of the difference, making it clear that while there is a difference, it's not as extreme as the original visualization suggested.
+    - **Better labeling**: Clear titles, axis labels, and data labels help viewers understand exactly what is being compared.
+
 4.  What, if any, useful information do these data and your visualization tell us about mask wearing and COVID?
     It'll be difficult to set aside what you already know about mask wearing, but you should try to focus only on what this visualization tells.
     Feel free to also comment on whether that lines up with what you know about mask wearing.
